@@ -13,16 +13,6 @@ for i=1:n
     binDatawords(i) = dec2bin(hex2dec(datawords(i)));
 end
 
-% optckLength = 0;
-% % dWordLength = strlength(datawords(1));
-% if(dWordLength == 1 || dWordLength == 2)
-%     optckLength = 8;
-% elseif(dWordLength ==3 || dWordLength == 4)
-%     optckLength = 16;
-% elseif(dWordLength>=5 && dWordLength<=8)
-%     optckLength = 32;
-% end
-
 sentChecksum = checksumFunc(binDatawords,n,optckLength);
 fprintf("Sent Checksum = %s\n",sentChecksum);
 
